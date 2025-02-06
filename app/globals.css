@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 14% 91%; /* #E5E7EB Light Gray */
+    --foreground: 222 47% 11%; /* Dark text for light mode */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Primary color - #0F172A Deep Navy */
+    --primary: 222 47% 11%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Accent color - #F97316 Orange */
+    --accent: 206,100%,73.3%,1;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Secondary/Gold - #FBBF24 */
+    --secondary: 212.97deg 57.23% 68.82%;
+    --secondary-foreground: 222 47% 11%;
+    
+    /* Muted based on light gray */
+    --muted: 220 14% 91%;
+    --muted-foreground: 222 47% 30%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Border and input using lighter variant */
+    --border: 220 14% 91%;
+    --input: 220 14% 91%;
+    --ring: 206,100%,73.3%;
+    
+    /* Chart colors */
+    --chart-1: 222 47% 11%; /* Deep Navy */
+    --chart-2: 25 95% 53%; /* Orange */
+    --chart-3: 38 96% 56%; /* Gold */
+    --chart-4: 222 47% 30%; /* Lighter Navy */
+    --chart-5: 25 95% 43%; /* Darker Orange */
+    
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222 47% 11%; /* #0F172A Deep Navy */
+    --foreground: 0 0% 100%;
+    --card: 222 47% 14%;
+    --card-foreground: 0 0% 100%;
+    --popover: 222 47% 14%;
+    --popover-foreground: 0 0% 100%;
+    
+    /* Adjusted for dark mode */
+    --primary: 206,100%,73.3%,1; /* Light Gray becomes primary in dark mode */
+    --primary-foreground: 222 47% 11%;
+    
+    --accent: 25 95% 53%; /* Orange stays vibrant */
+    --accent-foreground: 0 0% 100%;
+    
+    --secondary: 38 96% 56%; /* Gold */
+    --secondary-foreground: 222 47% 11%;
+    
+    --muted: 222 47% 20%;
+    --muted-foreground: 220 14% 70%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 222 47% 20%;
+    --input: 222 47% 20%;
+    --ring: 25 95% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Grid Pattern Background */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(15, 23, 42, 0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(15, 23, 42, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Custom Gradients */
+.custom-gradient {
+  background: linear-gradient(135deg, #0F172A, #F97316);
+}
+
+.custom-gradient-soft {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.1), rgba(249, 115, 22, 0.1));
+}
+
+.custom-gradient-gold {
+  background: linear-gradient(135deg, #F97316, #FBBF24);
+}
+
+/* Card Hover Effects */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+}
+
+.dark .card:hover {
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.2);
+}
+
+/* Glow Effects */
+.glow-accent {
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.2);
+}
+
+.dark .glow-accent {
+  box-shadow: 0 0 30px rgba(249, 115, 22, 0.3);
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+}
+
+/* Button Hover Effects */
+.button-gradient {
+  background: linear-gradient(135deg, #F97316, #FBBF24);
+  transition: all 0.3s ease;
+}
+
+.button-gradient:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Smooth Transitions */
+* {
+  transition: background-color 0.3s ease,
+              border-color 0.3s ease,
+              color 0.3s ease,
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(15, 23, 42, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+}
+
+/* Special Highlights */
+.highlight-orange {
+  color: #F97316;
+  text-shadow: 0 0 20px rgba(249, 115, 22, 0.2);
+}
+
+.highlight-gold {
+  color: #FBBF24;
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.2);
+}
+
+/* Border Accents */
+.border-accent {
+  border-color: #F97316;
+}
+
+.border-gold {
+  border-color: #FBBF24;
+}
+
+/* Focus States */
+.focus-ring {
+  outline: none;
+  ring: 2px solid #F97316;
+  ring-offset: 2px;
+}
