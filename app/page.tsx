@@ -281,7 +281,7 @@ export default function Home() {
             <span className="inline-block px-4 py-1 mb-4 bg-accent/10 text-accent rounded-full text-sm font-medium">
               Our Methodology
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl pb-3 font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
               Building MVPs That Matter
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
