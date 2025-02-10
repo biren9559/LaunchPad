@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'LaunchPad Labs - MVP & PoC Development Agency',
-  description: 'Transform your ideas into market-ready products in weeks. Specialized in rapid MVP development, PoC validation, and strategic product launches for startups and enterprises.',
+  title: 'LaunchPad Labs - MVP and PoC Development Agency',
+  description: 'Turning Ideas into Scalable Solutions, Transform your ideas into market-ready products in weeks. Specialized in rapid MVP development, PoC validation, and strategic product launches for startups and enterprises.',
 };
 
 export default function RootLayout({
