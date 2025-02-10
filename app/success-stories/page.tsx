@@ -19,8 +19,8 @@ export default function SuccessStories() {
       name: "HealthTech Connect",
       type: "Healthcare MVP",
       duration: "6 weeks",
-      image: "/success-stories/healthtech.jpg",
-      logo: "/success-stories/healthtech-logo.png",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=2070",
+      logo: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=200",
       description: "A revolutionary telemedicine platform connecting patients with specialists.",
       results: {
         users: "50K+",
@@ -37,8 +37,8 @@ export default function SuccessStories() {
       name: "FinFlow",
       type: "FinTech PoC",
       duration: "4 weeks",
-      image: "/success-stories/fintech.jpg",
-      logo: "/success-stories/fintech-logo.png",
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=2070",
+      logo: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=200",
       description: "AI-powered financial planning and investment management platform.",
       results: {
         users: "25K+",
@@ -55,8 +55,8 @@ export default function SuccessStories() {
       name: "EcoTrack",
       type: "GreenTech MVP",
       duration: "8 weeks",
-      image: "/success-stories/greentech.jpg",
-      logo: "/success-stories/greentech-logo.png",
+      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=2070",
+      logo: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=200",
       description: "Sustainable supply chain tracking and carbon footprint monitoring.",
       results: {
         users: "100K+",
@@ -110,7 +110,7 @@ export default function SuccessStories() {
                     <img
                       src={story.image}
                       alt={story.name}
-                      className="w-full h-[300px] object-cover"
+                      className="w-full h-[420px] object-cover"
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
                       <div className="flex items-center gap-4">

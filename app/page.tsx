@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, Laptop, Rocket, Lightbulb, BarChart3, Search, PenTool, Repeat, DollarSign, Timer, HeartHandshake, Database, Code, Target, Scale, Users, LineChart, Shield } from "lucide-react";
+import { ArrowRight, Code2, Laptop, Rocket, Lightbulb, BarChart3, Search, PenTool, Repeat, DollarSign, Timer, HeartHandshake, Database, Code, Target, Scale, Users, LineChart, Shield, Clock, Heart, Building2 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -259,6 +259,229 @@ export default function Home() {
                 </Card>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Approach Section */}
+      <section className="py-20 bg-background relative overflow-hidden">
+        {/* Animated background pattern */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-10 animate-pulse"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-accent/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl"></div>
+        
+        <div className="container px-4 mx-auto relative">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            className="text-center mb-20"
+          >
+            <span className="inline-block px-4 py-1 mb-4 bg-accent/10 text-accent rounded-full text-sm font-medium">
+              Our Methodology
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+              Building MVPs That Matter
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Our proven approach combines speed, innovation, and market validation
+            </p>
+          </motion.div>
+
+          {/* Rapid Validation Section with enhanced design */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-32">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <div className="relative">
+                <div className="absolute -left-6 -top-6 w-16 h-16 bg-accent/10 rounded-2xl rotate-6"></div>
+                <div className="absolute -left-3 -top-3 w-16 h-16 bg-primary/10 rounded-2xl -rotate-3"></div>
+                <h3 className="text-3xl font-bold mb-4 relative z-10">Rapid Validation & Testing</h3>
+              </div>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                We believe in validating ideas quickly through real-world testing. Our approach focuses on getting your MVP in front of actual users as early as possible.
+              </p>
+              <ul className="space-y-6">
+                {[
+                  "User feedback integration from day one",
+                  "Continuous testing and iteration",
+                  "Data-driven decision making",
+                  "Quick pivot capability"
+                ].map((item, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-center gap-4 group"
+                  >
+                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all">
+                      <div className="h-2 w-2 rounded-full bg-primary"></div>
+                    </div>
+                    <span className="text-lg group-hover:text-primary transition-colors">{item}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/20 blur-3xl"></div>
+              <div className="relative p-3 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=2070"
+                  alt="Team collaboration"
+                  className="relative rounded-xl shadow-2xl transform transition-transform hover:scale-[1.02] duration-500"
+                />
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Success Metrics with enhanced cards */}
+          <div className="grid md:grid-cols-4 gap-8 mb-32">
+            {[
+              {
+                metric: "60%",
+                label: "Faster Time to Market",
+                icon: <Clock className="h-8 w-8" />
+              },
+              {
+                metric: "85%",
+                label: "Cost Reduction",
+                icon: <DollarSign className="h-8 w-8" />
+              },
+              {
+                metric: "95%",
+                label: "Client Satisfaction",
+                icon: <Heart className="h-8 w-8" />
+              },
+              {
+                metric: "40+",
+                label: "Industries Served",
+                icon: <Building2 className="h-8 w-8" />
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center"
+              >
+                <Card className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-b from-background to-primary/5">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6 hover:scale-110 transition-transform duration-300">
+                    {item.icon}
+                  </div>
+                  <div className="text-5xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    {item.metric}
+                  </div>
+                  <div className="text-lg text-muted-foreground">{item.label}</div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Technology Stack with enhanced design */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative order-2 lg:order-1"
+            >
+              <div className="grid grid-cols-2 gap-6">
+                <div className="space-y-6">
+                  <div className="relative p-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl">
+                    <img
+                      src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800"
+                      alt="Modern technology"
+                      className="rounded-xl shadow-lg transform hover:scale-[1.02] transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="relative p-2 bg-gradient-to-br from-accent/20 to-primary/20 rounded-2xl">
+                    <img
+                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+                      alt="Development process"
+                      className="rounded-xl shadow-lg transform hover:scale-[1.02] transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+                <div className="mt-12">
+                  <div className="relative p-2 bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 rounded-2xl">
+                    <img
+                      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800"
+                      alt="Team collaboration"
+                      className="rounded-xl shadow-lg transform hover:scale-[1.02] transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-8 order-1 lg:order-2"
+            >
+              <div className="relative">
+                <div className="absolute -left-6 -top-6 w-16 h-16 bg-primary/10 rounded-2xl rotate-6"></div>
+                <div className="absolute -left-3 -top-3 w-16 h-16 bg-accent/10 rounded-2xl -rotate-3"></div>
+                <h3 className="text-3xl font-bold mb-4 relative z-10">Cutting-Edge Tech Stack</h3>
+              </div>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                We use the latest technologies to build scalable, secure, and high-performance MVPs that can grow with your business.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                {[
+                  {
+                    title: "Frontend",
+                    items: ["React", "Next.js", "Vue.js", "Tailwind CSS"]
+                  },
+                  {
+                    title: "Backend",
+                    items: ["Node.js", ".Net", "Php", "Python"]
+                  },
+                  {
+                    title: "Database",
+                    items: [ "MSSQL","MySql", "MongoDB", "PostgreSQL", "Firebase", "Redis"]
+                  },
+                  {
+                    title: "DevOps",
+                    items: ["AWS","Azure", "GCP", "Docker", "Kubernetes", "CI/CD"]
+                  }
+                ].map((category, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="space-y-3"
+                  >
+                    <Card className="p-4 bg-gradient-to-br from-background to-primary/5">
+                      <h4 className="font-semibold text-lg text-primary mb-3">{category.title}</h4>
+                      <ul className="space-y-2">
+                        {category.items.map((item, i) => (
+                          <li key={i} className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
+                            <div className="h-1.5 w-1.5 rounded-full bg-primary/60"></div>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
