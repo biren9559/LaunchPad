@@ -30,9 +30,9 @@ export default function Home() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen">
+      <section className="relative min-h-[calc(100vh-4rem)] flex items-center">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 dark:from-primary/10 dark:to-background"></div>
-        <div className="relative container px-4 mx-auto pt-32 pb-20">
+        <div className="relative container mx-auto px-4 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}

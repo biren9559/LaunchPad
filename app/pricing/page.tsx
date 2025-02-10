@@ -30,7 +30,7 @@ export default function Pricing() {
     },
     {
       name: "Professional",
-      price: "2,499",
+      price: "1,999",
       duration: "4 weeks",
       popular: true,
       features: [
